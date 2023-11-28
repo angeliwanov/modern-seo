@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>{{course.attributes.title}}</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/base.css" />
     <link rel="stylesheet" href="/css/tomorrow-night.css" />
@@ -41,6 +41,21 @@
   </head>
   <body>
     <!-- BEGIN EXERCISE -->
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@type": "Course", "name": "{{course.attributes.title}}",
+      "description": "{{course.attributes.summary}}", "provider": { "@type":
+      "Organization", "name": "Frontend Masters", "sameAs":
+      "https://frontendmasters.com/" } }
+    </script>
+
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@type": "BreadcrumbList",
+      "itemListElement": [{ "@type": "ListItem", "position": 1, "name":
+      "Courses", "item": "https://mike-seo.herokuapp.com/course/{{course.attributes.slug}}"
+      },{ "@type": "ListItem", "position": 2, "name": "{{course.attributes.slug}}",
+      "item": "https://mike-seo.herokuapp.com/course/{{course.attributes.title}}"
+      }] }
+    </script>
     <p>
       <a href="/">&lt; Back</a>
     </p>

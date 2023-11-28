@@ -1,28 +1,36 @@
 <html>
   <head>
     <title>Deployment Instructions</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/tomorrow-night.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/tomorrow-night.css" />
     <link rel="stylesheet" href="/app.css" />
     <!-- Begin Opengraph -->
     <meta property="og:url" content="https://mike-seo.herokuapp.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="List of courses" />
-    <meta property="og:description" content="Courses I teach. We turn great developers into seasoned experts" />
+    <meta
+      property="og:description"
+      content="Courses I teach. We turn great developers into seasoned experts"
+    />
     <!-- End Opengraph -->
-    
+
   </head>
   <body>
     <h1>Courses</h1>
     <!-- BEGIN EXERCISE -->
-    <ul class='courses'>
-      
-      {{!-- iterate over all the courses --}}    
+    <ul class="courses">
+
+      {{! iterate over all the courses }}
       {{#each courses as |course|}}
-        <li class='course'>
-          <a href='/course/{{course.attributes.slug}}'>
-            <img src={{course.attributes.image-info.square2x.url}} alt="" class="course-image">
+        <li class="course">
+          <a href="/course/{{course.attributes.slug}}">
+            <img
+              src={{course.attributes.image-info.square2x.url}}
+              alt=""
+              class="course-image"
+            />
             <h3 class="course-title">{{course.attributes.title}}</h3>
           </a>
           <p>{{course.attributes.summary}}</p>
