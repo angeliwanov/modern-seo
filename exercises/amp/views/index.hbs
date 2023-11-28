@@ -30,7 +30,8 @@
         <li class='course'>
           <a href='/course/{{course.attributes.slug}}'>
             <h3 class="course-title">{{course.attributes.title}}</h3>
-            <img src={{course.attributes.image-info.square2x.url}} alt="{{course.attributes.title}}" class="course-image">
+            <amp-img src={{course.attributes.image-info.square2x.url}} width="64px"
+              height="64px" alt="{{course.attributes.title}}" class="course-image">
           </a>
           <p>{{course.attributes.summary}}</p>
         </li>
